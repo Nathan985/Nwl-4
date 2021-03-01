@@ -49,6 +49,28 @@
     transition: background-color 0.5s;
 }
 
-.CountdownButton:hover{
+.CountdownButton:not(:disabled):hover{
     background: var(--blue-dark);
+}
+
+.CountdownButtonActive{
+    background: var(--white);
+    color: var(--title);
+    border-bottom: 6px solid var(--red);
+}
+
+.CountdownButtonActive:not(:disabled):hover{
+    background: var(--red);
+    color: var(--white);
+}
+
+.CountdownButton:disabled{
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed;
+    border-bottom: 6px solid var(--green);
+}
+.CountdownButton:disabled img{
+    margin-left: 8px;
+    transform: translateY(2px);
 }
